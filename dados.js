@@ -1,6 +1,5 @@
 const api = {
-    Manager: [
-        {
+    Manager: [{
             name: 'WSAssessoria',
             uri: 'api/manager/wsassessoria',
             description: 'Serviço SOAP WSAssessorias para permitir a manutenção dos dados de cobrança entre credor e Assessorias'
@@ -31,8 +30,7 @@ const api = {
             description: 'API para gerenciamento de fraudes'
         }
     ],
-    Evolution: [
-        {
+    Evolution: [{
             name: 'Siscobra WS',
             uri: 'api/evolution/siscobraws',
             description: 'Serviço SOAP SiscobraWS para portal de autonegociações'
@@ -48,8 +46,7 @@ const api = {
             description: 'Integração disponíveis no WebService da Siscobra'
         }
     ],
-    Pay: [
-        {
+    Pay: [{
             name: 'Pay Boleto',
             uri: 'api/pay/payboleto',
             description: 'Integração via API com a plataforma Pay Boleto'
@@ -61,3 +58,46 @@ const api = {
         }
     ]
 }
+
+
+const database = [{
+        name: 'Manager',
+        uri: 'database/manager/',
+        description: 'Documentação de Banco de Dados - Siscobra Manager'
+    },
+    {
+        name: 'Evolution',
+        uri: 'database/evolution/',
+        description: 'Documentação de Banco de Dados - Siscobra Evolution'
+    },
+    {
+        name: 'Smart',
+        uri: 'database/smart/',
+        description: 'Documentação de Banco de Dados - Siscobra Smart'
+    },
+    {
+        name: 'Developer',
+        uri: 'database/developer/',
+        description: 'Documentação de Banco de Dados - Siscobra Developer'
+    },
+    {
+        name: 'Flow',
+        uri: 'database/flow/',
+        description: 'Documentação de Banco de Dados - Siscobra Flow'
+    },
+    {
+        name: 'Plus',
+        uri: 'database/plus/',
+        description: 'Documentação de Banco de Dados - Siscobra Plus'
+    },
+    {
+        name: 'Pay Boleto',
+        uri: 'database/pay_boleto/',
+        description: 'Documentação de Banco de Dados - Siscobra Pay Boleto'
+    },
+    {
+        name: 'Pay Cartão',
+        uri: 'database/pay_cartao/',
+        description: 'Documentação de Banco de Dados - Siscobra Pay Cartão'
+    }
+]

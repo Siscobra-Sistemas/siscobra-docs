@@ -21,10 +21,24 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
     <style>
       :root {
         --bs-primary: #e20613;
+        --primary: #e20613;
+        --secondary: #6c757d;
+        
+      }
+
+      .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        --bs-nav-pills-link-active-bg: var(--primary);
+      }
+
+      .nav-link:focus, .nav-link:hover {
+        color: var(--secondary);
+      }
+
+      .nav-link {
+        color: var(--secondary);
       }
 
       body {
@@ -46,6 +60,11 @@
       * {
         font-family: "Lexend", "Roboto", sans-serif !important;
       }
+
+      .tab-content {
+        margin-bottom: 4em;
+      }
+
     </style>
     <script src="dados.js"></script>
   </head>
@@ -60,11 +79,25 @@
       <div>
         <h1 class="mt-5">Siscobra - Documentações</h1>
         <p style="font-weight: 300">
-          Essa página tem como objetivo centralizar as documentações de API fornecidas pela Siscobra, agrupadas por
-          produto!
+          Essa página tem como objetivo centralizar as documentações de API e Databases fornecidas pela Siscobra!
         </p>
       </div>
-      <div class="accordion accordion-flush" id="accordionExample"></div>
+      <ul class="nav nav-pills mb-3" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#api" type="button" role="tab" aria-controls="api" aria-selected="true">API</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#database" type="button" role="tab" aria-controls="database" aria-selected="false">Database</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="api" role="tabpanel" aria-labelledby="home-tab">
+          <div class="accordion accordion-flush" id="accordionExample"></div>
+        </div>
+        <div class="tab-pane fade" id="database" role="tabpanel" aria-labelledby="database-tab">
+          <div id="databases-container"></div>
+        </div>
+      </div>
     </div>
     <script>
       function openLink(uri) {
@@ -74,8 +107,6 @@
       let elements = "";
       let index = 0;
       for (product in api) {
-        console.log(product);
-        console.log(api);
         const data = api[product];
         let element = `
           <div class="accordion-item">
@@ -118,6 +149,22 @@
 
       const accordion = document.querySelector("#accordionExample");
       accordion.innerHTML = elements;
+
+      cards = ""
+      for (item of database) {
+        cards += `
+                <div class="card mb-1 mt-1" style="cursor: pointer;" onclick="openLink('${item.uri}')">
+                  <div class="card-body">
+                    <div class="fw-semibold">${item.name}</div>
+                    <span class="fw-light" style="font-size: smaller">${item.description}</span>
+                  </div>
+                </div>
+              `;
+      }
+
+      const databases = document.querySelector("#databases-container")
+      databases.innerHTML = cards
+
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
