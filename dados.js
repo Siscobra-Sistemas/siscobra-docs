@@ -113,4 +113,19 @@ const libs = [
     uri: "lib/siscobra-jar/dist/javadoc/",
     description: "Documentação do Siscobra Jar",
   },
+  {
+    name: "Siscobra Cloud",
+    uri: "lib/siscobracloud-jar/javadoc/",
+    description: "Documentação do Siscobra Cloud",
+  },
+  {
+    name: "Atualizador / Comparador / Versionador",
+    uri: "lib/comparer-updater-versioner/javadoc/",
+    description: "Documentação do Atualizador / Comparador / Versionador",
+  },
+  {
+    name: "Siscobra Lib",
+    uri: "lib/siscobralib-jar/dist/javadoc/",
+    description: "Documentação do Siscobra Lib",
+  },
 ];
