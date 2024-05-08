@@ -13,6 +13,12 @@ const api = {
         "Serviço SOAP WSAssessorias para permitir a manutenção dos dados de cobrança entre credor e Assessorias",
     },
     {
+      name: "WSAssessoria Portugal",
+      uri: "apis/manager/WSAssessoriaPortugal",
+      description:
+        "Serviço SOAP WSAssessorias para permitir a manutenção dos dados de cobrança entre credor e Assessorias",
+    },
+    {
       name: "Siscobra WS",
       uri: "apis/manager/siscobraws",
       description: "Serviço SOAP SiscobraWS para portal de autonegociações",
