@@ -7,6 +7,12 @@ const api = {
         "Serviço SOAP WSAssessorias para permitir a manutenção dos dados de cobrança entre credor e Assessorias",
     },
     {
+      name: "WSAssessoria Boticário",
+      uri: "apis/manager/wsassessoriaboticario",
+      description:
+        "Serviço SOAP WSAssessorias para permitir a manutenção dos dados de cobrança entre credor e Assessorias",
+    },
+    {
       name: "WSAssessoria Internacional",
       uri: "apis/manager/wsassessoriainternacional",
       description:
